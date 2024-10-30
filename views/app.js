@@ -1,5 +1,6 @@
 const http = require('http');
-const port = 900;
+const taskRoutes = require('../routes/taskRoutes');
+const port = 9000;
 const hostname = "localhost";
 
 const server = http.createServer((req, res) => {
@@ -7,10 +8,10 @@ const server = http.createServer((req, res) => {
         taskRoutes(req, res); 
     } else {
         res.writeHead(404, 'Not Found', { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ message: 'Page not found' }));
+        res.end(JSON.stringify({ message: 'sorry you got lost !' }));
     }
 });
 
 server.listen(port, hostname, () => {
-    console.log(`Server running at ${port}/`);
+    console.log(`Server running on ${port}`);
 });

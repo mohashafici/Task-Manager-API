@@ -1,21 +1,20 @@
-const fs=require('fs');
-const path=require('path');
-const { json } = require("stream/consumers");
-const filePath= './../data/tasks.json';
+const fs = require('fs');
+const path = require('path');
 
-exports. writeTasksTOFile=(tasks)=>{
+const filePath = path.join(__dirname, '../data/tasks.json');
+
+// Write tasks to file
+exports.writeTasksToFile = (tasks) => {
     fs.writeFileSync(filePath, JSON.stringify(tasks));
-}
-exports. readTaskFromFile=()=>{
-if(!fs.existsSync(filePath)){
-    writeTasksToFile([]);
-}
-const data=fs.readFileSync(filePath)
+};
 
-return JSON.parse(data); 
+// Read tasks from file
+exports.readTaskFromFile = () => {
+    // If file does not exist, initialize it with an empty array
+    if (!fs.existsSync(filePath)) {
+        exports.writeTasksToFile([]);  // Use `exports.writeTasksToFile` directly
+    }
+    const data = fs.readFileSync(filePath);
 
-
-
-
-
-}
+    return JSON.parse(data);
+};

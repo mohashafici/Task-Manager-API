@@ -1,11 +1,15 @@
 
 //exports ma aanan sameynin
 
+const { readTaskFromFile } = require("../utils/fileHandler")
+
 exports.getTask = (req,res)=>{
- const task=readTaskFromFile()
+ const tasks=readTaskFromFile()
 }
 
-exports.createTask = (req,res)=>{}
+exports.createTask = (req,res)=>{
+    
+}
 exports.updatedTask = (req,res)=>{}
 
 exports.deleteTask = (req,res)=>{}

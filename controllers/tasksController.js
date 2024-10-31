@@ -19,30 +19,25 @@ exports.createTask = (req, res) => {
             return;
         }
 
+      const image=  files.image[0];
+
+
         const tasks = readTaskFromFile();
         const newTask = {
             id: Date.now(),
             title: fields.title,
             description: fields.description,
             status: fields?.status || 'pending',
-            image: files.image ? `/uploads/${files.image.name}` : null,
+            image:image ? `/uploads/${image.originalFilename}` : null,
         };
         tasks.push(newTask);
 
         // Write the updated tasks list to file
         writeTasksToFile(tasks);
 
-        // Check if the image file exists and has a path before trying to copy it
-        if (files.image && files.image.path) {
-            const destinationPath = path.join(__dirname, '../uploads', files.image.name);
-            try {
-                fs.copyFileSync(files.image.path, destinationPath);
-            } catch (copyError) {
-                console.error("Error copying file:", copyError);
-                res.writeHead(500, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ message: 'Error saving uploaded image' }));
-                return;
-            }
+        if (files.image ) {
+           fs.copyFileSync(image.filepath,path.join(__dirname,'../uploads',image.originalFilename));
+           res.end(JSON.stringify(newTask));
         }
 
         // Send the response with the new task

@@ -5,7 +5,7 @@ const filePath = path.join(__dirname, '../data/tasks.json');
 
 // Write tasks to file
 exports.writeTasksToFile = (tasks) => {
-    fs.writeFileSync(filePath, JSON.stringify(tasks));   // modifying to json file:1 commit message
+    fs.writeFileSync(filePath, JSON.stringify(tasks,null, 2));   // modifying to json file:1 commit message
 };
 
 // Read tasks from file

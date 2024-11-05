@@ -45,41 +45,25 @@ task-manager-api/
 └── package.json                # Project metadata and dependencies
 ```
 
-##  Setup and Installation
-Clone the repository:
-
-bash
-
-git clone https://github.com/your-username/task-manager-api.git
-cd task-manager-api
-Install dependencies:
-
-bash
-Copy code
-npm install
-Start the server:
-
-bash
-Copy code
-node app.js
-The server will run at http://localhost:3000.
 ## Setup and Installation
 Clone the repository:
 
-bash
+```bash
 
 git clone https://github.com/your-username/task-manager-api.git
+
 cd task-manager-api
+```
 Install dependencies:
 
-bash
-Copy code
+```bash
 npm install
+```
 Start the server:
 
-bash
-Copy code
+```bash
 node app.js
+```
 The server will run at http://localhost:9000.
 
 ## Usage
@@ -91,7 +75,7 @@ The server will run at http://localhost:9000.
 - Delete a Task: Remove a task using its ID.
 - Image Upload: Upload an image with each task. Images are stored in the /uploads folder.
 
-Endpoints
+## Endpoints
 - POST /tasks - Create a new task.
 - GET /tasks - Retrieve a list of tasks (with optional status filter).
 - PUT /tasks/:id - Update a specific task.

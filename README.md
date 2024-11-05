@@ -1,28 +1,32 @@
-Personal Task Manager API
+# Personal Task Manager API
 
 A backend API built with Node.js to manage personal tasks, featuring CRUD operations, image upload support, and data persistence in JSON files. This project provides a hands-on simulation of managing tasks with a real-world approach, focusing on modularity, maintainability, and basic routing.
 
-Table of Contents
-Project Overview
-Features
-Project Structure
-Setup and Installation
-Usage
-Endpoints
-Optional: Basic Authentication
-License
-Project Overview
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Endpoints](#endpoints)
+- [Optional: Basic Authentication](#optional-basic-authentication)
+- [License](#license)
+
+## Project Overview
+
 This API allows users to create, read, update, and delete tasks, with an option to upload images associated with tasks. Data persistence is managed through JSON files, ensuring that tasks remain saved across server restarts.
 
-Features
-CRUD Operations: Create, Read, Update, and Delete tasks.
-Image Upload: Upload an image associated with each task.
-Persistent Storage: Data is stored in a JSON file using Node.js' fs module.
-HTTP Server: Built-in HTTP server handling task routes.
-Optional Authentication: Basic login with hardcoded credentials to protect routes.
-Project Structure
-bash
-Copy code
+## Features
+
+- **CRUD Operations**: Create, Read, Update, and Delete tasks.
+- **Image Upload**: Upload an image associated with each task.
+- **Persistent Storage**: Data is stored in a JSON file using Node.js' `fs` module.
+- **HTTP Server**: Built-in HTTP server handling task routes.
+- **Optional Authentication**: Basic login with hardcoded credentials to protect routes.
+
+## Project Structure
+
+```bash
 task-manager-api/
 ├── controllers/
 │   ├── taskController.js       # Contains logic for handling tasks
@@ -39,6 +43,7 @@ task-manager-api/
 │   └── index.html              # Basic front-end UI (optional)
 ├── app.js                      # Main server setup
 └── package.json                # Project metadata and dependencies
+
 Setup and Installation
 Clone the repository:
 

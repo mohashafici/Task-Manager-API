@@ -42,10 +42,10 @@
   {
     "id": 1730392569873,
     "title": [
-      "Task 2"
+      "Updated Task 4"
     ],
     "status": "pending",
-    "image": "/uploads/images.jpeg"
+    "image": "/uploads/image.jpeg"
   },
   {
     "id": 1730392652116,
@@ -54,5 +54,13 @@
     ],
     "status": "pending",
     "image": "/uploads/images.jpeg"
+  },
+  {
+    "id": 1730795541900,
+    "title": [
+      "Task 4"
+    ],
+    "status": "pending",
+    "image": "/uploads/image.jpeg"
   }
 ]
